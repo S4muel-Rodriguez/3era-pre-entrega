@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* Estilos del pie de página*/
+.rrss .special-link, .rrss a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px;
+  color: blueviolet;
+  font-size: 20px;
+}
+.rrss .special-link:hover, .rrss a:hover {
+  transition: all 1s;
+  animation: alternate 1s infinite;
+  animation-duration: 1ms;
+  color: white;
+  background-color: blueviolet;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.rrss {
+  color: yellow;
+  background-color: black;
+  text-align: center;
+  text-shadow: 1px 2px 1px white;
+  font-size: 34px;
+}
+.rrss p {
+  transition: all 1s ease-in;
+  transition-duration: 1s;
+}
+.rrss .special-link {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,36 @@
+/*Mixins*/
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+// Mixins
+@mixin transition($properties) {
+    transition: $properties;
+    transition-duration: 1s all ease-in;
+}
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties;
+}
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+@mixin link-styles {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    color: $blueviolet;
+    font-size: 20px;
+
+    &:hover {
+        @include transition(all $transition-duration);
+        animation: alternate $transition-duration infinite;
+        animation-duration: 1ms;
+        color: $white;
+        background-color: $blueviolet;
+        text-decoration: none;
+        border-radius: $border-radius;
+    }
+}

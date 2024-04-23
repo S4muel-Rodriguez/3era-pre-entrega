@@ -1,0 +1,237 @@
+// Variables
+$color-fondo: #c4c3c3; // Color de fondo del header
+$color-texto: #212529; // Color del texto del header
+$color-activo: #a59a06f3; // Color del enlace activo
+
+// Estilos del header
+// Variables
+$color-fondo: #f8f9fa; // Color de fondo del header
+$color-sombra: rgba(0, 0, 0, 0.2); // Color de la sombra
+header{
+    background-color: $color-fondo;
+    padding: 20px; // Espacio interior del header
+    border-radius: 20px;
+    animation: sombraAnimacion 1s infinite alternate; // Animación de sombra
+  }
+  
+  @keyframes sombraAnimacion {
+    0% {
+      box-shadow: 0 0 0 0 $color-sombra; // Sin sombra
+    }
+    100% {
+      box-shadow: 0 0 20px 10px $color-sombra; // Sombra más grande
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none; // Quita los estilos de la lista
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; // Centra los elementos en el eje horizontal
+    }
+}
+
+
+      li {
+        margin: 0 10px; // Espacio entre los elementos de la lista
+        transition: transform 0.3s ease; // Transición suave al pasar el cursor
+    
+        
+
+        a {
+          text-decoration: none;
+          color: $color-texto;
+          transition: color 0.3s ease; // Transición suave del color del texto
+        
+            
+
+          &:hover {
+            color: $color-activo; // Cambia el color del texto al pasar el cursor
+            transform: translateY(-3px); // Efecto de elevación al pasar el cursor
+            box-shadow: 1px 1px  rgba(248, 115, 115, 0.37);
+          }
+
+          &.active {
+            color: $color-activo; // Color del enlace activo
+            
+          }
+        }
+      }
+    
+
+      // Variables
+$color-fondo-seccion: #f3f4f6; // Color de fondo de la sección
+$color-borde: #ced4da; // Color del borde
+$color-sombra: rgba(0, 0, 0, 0.2); // Color de la sombra
+$espaciado-interior: 20px; // Espaciado interior
+
+// Mixin para sombra
+@mixin sombra($x, $y, $blur, $color: rgba(0, 0, 0, 0.2)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Extend para estilos de lista
+%estilo-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Estilos de la sección
+section {
+  background-color: $color-fondo-seccion;
+  padding: $espaciado-interior;
+  border-radius: 10px;
+  border: 1px solid $color-borde;
+
+  article {
+    .equipos-sectores {
+      p {
+        margin-bottom: $espaciado-interior;
+      }
+
+      ul {
+        @extend %estilo-lista;
+        
+        li {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        // Anidación para los párrafos dentro de la lista
+        p {
+          margin-bottom: 20px;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  // Animación de sombra en la sección
+  @include sombra(0, 0, 10px, $color-sombra);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    @include sombra(0, 0, 20px, $color-sombra);
+  }
+}
+// Variables
+$color-fondo-footer: #f3f4f6; // Color de fondo del footer
+$color-texto: #212529; // Color del texto del footer
+$color-activo: #6aaaee; // Color del enlace activo
+$color-sombra: rgba(0, 0, 0, 0.2); // Color de la sombra
+$espaciado-interior: 20px; // Espaciado interior
+
+// Mixin para sombra
+@mixin sombra($x, $y, $blur, $color: rgba(0, 0, 0, 0.2)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Extend para estilos de lista
+%estilo-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Variables
+$color-fondo-footer: #f3f4f6; // Color de fondo del footer
+$color-texto: #212529; // Color del texto del footer
+$color-activo: #6aaaee; // Color del enlace activo
+$color-sombra: rgba(0, 0, 0, 0.2); // Color de la sombra
+$espaciado-interior: 20px; // Espaciado interior
+
+// Mixin para sombra
+@mixin sombra($x, $y, $blur, $color: rgba(0, 0, 0, 0.2)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Extend para estilos de lista
+%estilo-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Variables
+$color-fondo-footer: #f3f4f6; // Color de fondo del footer
+$color-texto: #212529; // Color del texto del footer
+$color-sombra: rgba(0, 0, 0, 0.2); // Color de la sombra
+$espaciado-interior: 20px; // Espaciado interior
+
+// Mixin para sombra
+@mixin sombra($x, $y, $blur, $color: rgba(0, 0, 0, 0.2)) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Estilos del footer
+footer {
+    padding: 20px; // Espaciado interno del footer
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+  .redes_sociales {
+    text-align: center; // Centra los elementos
+    font-size: 16px; // Tamaño de fuente
+    font-family: Arial, sans-serif; // Fuente
+
+    h3, a {
+      margin: 0px; // Elimina el margen
+      padding: 0px; // Añade espacio interno
+      transition: all 1s ease; // Transición suave
+      @include sombra(2px, 2px, 2px, black); // Agrega sombra
+      text-decoration: none;
+      text-shadow: black;
+      color: rgba(207, 207, 4, 0.685);
+      background-color: #212529;
+
+
+      &:hover {
+        color: darken($color-texto, 10%); // Cambia el color al pasar el cursor
+        transform: translateY(-5px); // Levanta ligeramente al pasar el cursor
+      }
+    }
+  }
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 767px) {
+    /* Estilos del header */
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Estilos del artículo */
+    article {
+      padding: 20px;
+    }
+  
+    /* Estilos del footer */
+    footer {
+      padding: 20px;
+    }
+  }
+  
+  /* Media queries para tabletas */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos del header */
+    header nav ul {
+      justify-content: center;
+    }
+  
+    /* Estilos del artículo */
+    article {
+      padding: 30px;
+    }
+  
+    /* Estilos del footer */
+    footer {
+      padding: 30px;
+    }
+  }
+  

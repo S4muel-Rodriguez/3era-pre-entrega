@@ -1,0 +1,80 @@
+.card-video {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card-video video:hover {
+  transform: scale(1.05);
+}
+
+.card-video {
+  display: inline-block;
+  width: 18rem;
+  height: 10rem;
+  margin-right: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.card-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card-video:last-child {
+  margin-right: 0;
+}
+
+.lista_beneficios--pelo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.lista_beneficios--pelo p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+.lista_beneficios--pelo ul {
+  list-style-type: none;
+  padding: 0;
+}
+.lista_beneficios--pelo ul li {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.masfotos--pelo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.masfotos--pelo img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s ease;
+}
+.masfotos--pelo img:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */

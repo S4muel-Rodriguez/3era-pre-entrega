@@ -1,0 +1,203 @@
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+  background-image: linear-gradient(to left, rgba(200, 245, 38, 0.479), rgba(23, 114, 62, 0.911)), url("/img/productos foto.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-bottom: none;
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: rgb(152, 66, 233);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px 3px rgba(148, 15, 15, 0.466);
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover {
+  color: #7f1ade;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.navbar .navbar-toggler {
+  border: none;
+  background-color: rgb(152, 66, 233);
+  color: rgb(152, 66, 233);
+  box-shadow: 2px 2px 3px rgba(148, 15, 15, 0.466);
+}
+.navbar .navbar-toggler:hover {
+  color: #7f1ade;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.registro {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(to left, blueviolet, seagreen);
+  box-shadow: 0 0 20px blueviolet;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 50px) {
+  .registro {
+    padding: 10px;
+  }
+}
+.registro ul {
+  list-style: none;
+  padding: 0;
+}
+.registro ul li {
+  margin-bottom: 20px;
+}
+
+.boton-registro--enviar {
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 1s all ease-in;
+}
+.boton-registro--enviar:hover {
+  background-color: seagreen;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid seagreen;
+  border-radius: 10px;
+}
+
+.nav-link.active {
+  color: blueviolet;
+  text-shadow: 2px 2px 2px blueviolet;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+.nav-link.active:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 10px seagreen;
+}
+
+.titulosregistro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.titulosregistro h1 {
+  color: blueviolet;
+  text-shadow: 2px 2px 4px seagreen;
+  transition: all 0.3s ease-in-out;
+}
+.titulosregistro h1:hover {
+  transform: scale(1.05);
+}
+.titulosregistro h2 {
+  color: blueviolet;
+  text-shadow: 2px 2px 4px seagreen;
+  transition: all 0.3s ease-in-out;
+}
+.titulosregistro h2:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: black;
+  color: blueviolet;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+footer .contactos h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: inherit;
+  transition: color;
+  transition-duration: 0.5s;
+}
+footer .contactos a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color;
+  transition-duration: 0.5s;
+}
+footer .contactos a:hover {
+  color: seagreen;
+}
+footer .contactos i {
+  margin: 0 5px;
+  font-size: 20px;
+}
+
+footer:hover {
+  color: seagreen;
+}
+
+textarea {
+  width: 18%;
+  height: 45px;
+  border-radius: 5px;
+  border: 2px solid blueviolet;
+  background-color: rgb(241, 241, 226);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.5s;
+}
+button:hover {
+  background-color: seagreen;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .navbar-toggler {
+    order: 1;
+  }
+  .navbar-brand {
+    margin-right: auto;
+  }
+  .registro {
+    padding: 10px;
+  }
+  textarea,
+  button {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-size: cover;
+  }
+  .registro {
+    padding: 15px;
+  }
+}
+
+/*# sourceMappingURL=iniciodesesioncontacto.css.map */

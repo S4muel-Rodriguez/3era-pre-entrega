@@ -1,0 +1,541 @@
+
+.titulo, .subtitulo{
+    font-size:small;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-shadow: 4px 4px 5px blanchedalmond;
+}
+/*Estilos de la navegación*/ 
+// Variables
+$bg-body-tertiary: #f0f0f0;
+$text-color: #333;
+$transition-duration: 1s;
+$box-shadow-default: 0px 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.2);
+$color-seagreen: seagreen;
+$color-blueviolet: blueviolet;
+
+// Funciones
+@function darken($color, $amount) {
+  @return mix(black, $color, $amount);
+}
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Extend
+%navbar-link {
+  color: $text-color;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  box-shadow: $box-shadow-default;
+  @include transition(all $transition-duration ease-in-out);
+
+  &:hover {
+    color: darken($text-color, 10%);
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+// Estilos para la barra de navegación
+.navbar {
+  margin-bottom: 20px; // Separación del contenido
+  background-color: transparent;
+  border-bottom: none;
+
+  .navbar-brand {
+    font-weight: bold;
+    color: $text-color;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    box-shadow: $box-shadow-default;
+    @include transition(all $transition-duration ease-in-out);
+    background-color: rgb(144, 49, 233);
+
+    &:hover {
+      color: darken($text-color, 10%);
+      box-shadow: $box-shadow-hover;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      @extend %navbar-link;
+      
+      &.active {
+        font-weight: bold;
+        
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background-color: $color-blueviolet;
+    color: $text-color;
+    box-shadow: $box-shadow-default;
+        
+
+    &:hover {
+      color: darken($text-color, 10%);
+      box-shadow: $box-shadow-hover;
+            
+    }
+  }
+}
+
+// Estilos para el título
+.titulo {
+  text-align: center;
+  margin-top: 20px; // Separación del navbar
+  margin-bottom: 20px; // Espacio entre el título y el contenido
+}
+// Variables
+$amarillo: rgb(171, 173, 7);
+$grey: grey;
+$rgba-black: rgba(0, 0, 0, 0.5);
+$transition-duration: 0.3s;
+$animation-duration: 0.5s;
+
+// Funciones
+@function darken($color, $amount) {
+  @return mix(black, $color, $amount);
+}
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Extend
+%section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $grey;
+  
+    p {
+      text-shadow: 2px 2px 4px $rgba-black;
+      animation: title-animation $animation-duration infinite alternate;
+    }
+  
+    @keyframes title-animation {
+      from {
+        color: $amarillo;
+      }
+      to {
+        color: $grey;
+      }
+    }
+  }
+
+// Estilos para la sección de belleza
+.seccion_belleza {
+  @extend %section-title;
+}
+// Variables
+$seagreen: seagreen;
+$blueviolet: blueviolet;
+$rgba-black: black;
+$rgba-black-strong: black;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+// Estilos
+body {
+    background-image: linear-gradient(to left, $seagreen, $blueviolet);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.seccion_belleza {
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(235, 232, 74);
+    p {
+        text-shadow: 2px 2px 4 $rgba-black;
+    }
+}
+
+
+.fotos_producto--belleza {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .producto-container {
+        text-align: center;
+        margin: 10px;
+
+        img {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px $rgba-black;
+            @include transition(all $transition-duration ease-in-out);
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 4px 4px 8px $rgba-black-strong;
+            }
+        }
+    }
+
+    input[type="button"] {
+        width: 200px;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-image: linear-gradient(to left, $blueviolet, $seagreen);
+        color: black;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 2px 2px 4px $rgba-black;
+        @include transition(all $transition-duration ease-in-out);
+        display: block;
+        margin: 0 auto;
+
+        &:hover {
+            background-image: linear-gradient(to left, $seagreen, $blueviolet);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 8px $rgba-black-strong;
+        }
+    }
+}
+
+
+
+
+// Variables
+$border-radius: 10px;
+$rgba-black: black;
+$rgba-black-strong: black;
+$transition-duration: 1s;
+
+// Mixins
+@mixin transition($properties) {
+    transition: $properties;
+    transition-duration: 1s all ease-in;
+}
+
+// estilos para el carrusel
+#carouselExampleSlidesOnly {
+    margin: 0 auto;
+  width: 80%; // Ajuste  del ancho según sea necesario
+
+    .carousel-inner {
+    .carousel-item img {
+        border-radius: $border-radius;
+        box-shadow: 2px 2px 4px $rgba-black;
+        @include transition(all $transition-duration ease-in-out);
+
+        &:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 8px $rgba-black-strong;
+        transition: $transition-duration ease-in;
+
+        }
+    }
+    }
+}
+// Variables
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-size: 5px;
+$animation-duration: 0.5s;
+
+// Funciones
+@function multiply($a, $b) {
+  @return $a * $b;
+}
+
+// Variables
+$video-width: 18rem; // Ancho de los videos
+$video-height: 10rem; // Altura de los videos
+
+// Extend para la sombra
+%shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); // Sombra
+  transition: transform 0.3s ease; // Transición de la sombra al pasar el ratón
+}
+
+// Extend para la animación
+%hover-scale {
+  &:hover {
+    transform: scale(1.05); // Escalar al pasar el ratón
+  }
+}
+
+// Estilos para los videos
+.card-video {
+  display: inline-block; // Para que los elementos estén en línea
+  width: $video-width;
+  height: $video-height;
+  margin-right: 20px; // Espacio entre los videos
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center; // Para centrar el video horizontalmente
+  @extend %shadow; // Aplicar sombra
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Para que el video cubra todo el contenedor sin deformarse
+    border-radius: 8px;
+    @extend %hover-scale; // Aplicar animación al pasar el ratón
+  }
+
+  &:last-child {
+    margin-right: 0; // Eliminar el margen derecho del último video para evitar espacios adicionales
+  }
+}
+
+
+
+// Estilos para la lista de beneficios
+.lista_beneficios--pelo {
+  text-align: center;
+  margin-bottom: 20px;
+
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      font-size: 16px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Estilos para las fotos
+.masfotos--pelo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 $shadow-size multiply(2, $shadow-size) $shadow-color;
+    transition: box-shadow $animation-duration ease;
+
+    &:hover {
+      box-shadow: 0 $shadow-size multiply(4, $shadow-size) $shadow-color;
+      animation: pulse $animation-duration infinite alternate;
+    }
+  }
+}
+
+// Animaciones
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+// Variables
+$yellow: yellow;
+$black: black;
+$white: white;
+$blueviolet: blueviolet;
+$transition-duration: 1s;
+$border-radius: 20px;
+
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+@mixin link-styles {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    color: $blueviolet;
+    font-size: 20px;
+
+    &:hover {
+        @include transition(all $transition-duration);
+        animation: alternate $transition-duration infinite;
+        animation-duration: 1ms;
+        color: $white;
+        background-color: $blueviolet;
+        text-decoration: none;
+        border-radius: $border-radius;
+    }
+}
+
+// Extends
+%link-styles {
+    @include link-styles;
+}
+
+// Estilos
+.rrss {
+    color: $yellow;
+    background-color: $black;
+    text-align: center;
+    text-shadow: 1px 2px 1px $white;
+    font-size: 34px;
+
+    p {
+        @include transition(all $transition-duration ease-in);
+        transition-duration: $transition-duration;
+    }
+
+    a {
+        @extend %link-styles;
+    }
+
+    .special-link {
+        @extend %link-styles;
+        font-weight: bold;
+    }
+}
+
+// Variables para dispositivos móviles
+$mobile-breakpoint: 320px; // Tamaño de pantalla mínimo para dispositivos móviles
+$tablet-breakpoint: 768px; // Tamaño de pantalla para tablets
+$desktop-breakpoint: 1200px; // Tamaño de pantalla mínimo para escritorio
+
+// Estilos para .titulo y .subtitulo
+.titulo, .subtitulo {
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  text-shadow: 4px 4px 5px blanchedalmond;
+
+  // Estilos responsivos
+  @media screen and (max-width: $tablet-breakpoint) {
+    font-size: smaller; // Reducir el tamaño de fuente para tablets
+  }
+}
+
+// Estilos para .navbar
+.navbar {
+  // Otros estilos...
+
+  .navbar-brand {
+    // Otros estilos...
+
+    // Estilos responsivos
+    @media screen and (max-width: $tablet-breakpoint) {
+      font-size: smaller; // Reducir el tamaño de fuente para tablets
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      // Otros estilos...
+
+      // Estilos responsivos
+      @media screen and (max-width: $tablet-breakpoint) {
+        font-size: smaller; // Reducir el tamaño de fuente para tablets
+      }
+    }
+  }
+
+  .navbar-toggler {
+    // Otros estilos...
+
+    // Estilos responsivos
+    @media screen and (max-width: $tablet-breakpoint) {
+      font-size: smaller; // Reducir el tamaño de fuente para tablets
+    }
+  }
+}
+
+// Estilos para el título en .seccion_belleza
+.seccion_belleza {
+  // Otros estilos...
+
+  // Estilos responsivos
+  @media screen and (max-width: $tablet-breakpoint) {
+    font-size: small; // Reducir el tamaño de fuente para tablets
+  }
+}
+
+// Estilos para las fotos en .fotos_producto--belleza
+.fotos_producto--belleza {
+  // Otros estilos...
+
+  .producto-container {
+    // Otros estilos...
+
+    // Estilos responsivos
+    @media screen and (max-width: $tablet-breakpoint) {
+      margin: 5px; // Reducir el margen para tablets
+    }
+
+    img {
+      // Otros estilos...
+
+      // Estilos responsivos
+      @media screen and (max-width: $tablet-breakpoint) {
+        width: 150px; // Reducir el tamaño de la imagen para tablets
+        height: auto; // Permitir que la altura se ajuste automáticamente
+      }
+    }
+
+    input[type="button"] {
+      // Otros estilos...
+
+      // Estilos responsivos
+      @media screen and (max-width: $tablet-breakpoint) {
+        width: 100px; // Reducir el tamaño del botón para tablets
+      }
+    }
+  }
+}
+
+// Estilos para el carrusel en #carouselExampleSlidesOnly
+#carouselExampleSlidesOnly {
+  // Otros estilos...
+
+  .carousel-inner {
+    .carousel-item img {
+      // Otros estilos...
+
+      // Estilos responsivos
+      @media screen and (max-width: $tablet-breakpoint) {
+        width: 100%; // Ajustar el ancho de la imagen al 100% para tablets
+      }
+    }
+  }
+}
+
+// Estilos para el pie de página en .rrss
+.rrss {
+  // Otros estilos...
+
+  // Estilos responsivos
+  @media screen and (max-width: $tablet-breakpoint) {
+    font-size: small; // Reducir el tamaño de fuente para tablets
+  }
+}

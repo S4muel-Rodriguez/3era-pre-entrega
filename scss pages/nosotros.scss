@@ -1,0 +1,223 @@
+
+// Variables
+$color-fondo: #103357;
+$color-texto: #629fdb;
+$color-activo: #6aaaee;
+
+// Función para la sombra
+@function sombra($x, $y, $blur, $color: rgba(0, 0, 0, 0.2)) {
+  @return $x $y $blur $color;
+}
+
+// Estilos de la barra de navegación
+.navbar {
+  background-color: $color-fondo;
+  box-shadow: sombra(0, 4px, 6px);
+
+  .navbar-brand {
+    color: $color-texto;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link {
+    color: $color-texto;
+    transition: color 0.3s ease;
+
+    &.active, &:hover {
+      color: $color-activo;
+    }
+  }
+
+  // Botón de toggle
+  .navbar-toggler {
+    border-color: $color-texto;
+    transition: border-color 0.3s ease;
+
+    .navbar-toggler-icon {
+      background-color: $color-texto;
+      transition: background-color 0.3s ease;
+
+      // Cambio de color al expandir el menú
+      .navbar-toggler[aria-expanded="true"] & {
+        background-color: $color-activo;
+      }
+    }
+  }
+
+  // Efecto de despliegue del menú
+  .navbar-collapse {
+    transition: transform 0.3s ease;
+
+    &.show {
+      transform: translateY(0);
+    }
+
+    // Estilo de los enlaces en el menú desplegado
+    .navbar-nav {
+      a {
+        padding: 10px 15px;
+        display: block;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: lighten($color-fondo, 5%);
+        }
+      }
+    }
+  }
+}
+
+
+// Variables
+$color-texto-titulo: #333;
+$color-sombra: rgba(0, 0, 0, 0.2);
+
+// estilo a titulo
+.titulos {
+    color: $color-texto;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+
+// Estilos de las imágenes y el texto
+seccion {
+    article {
+      .sitios_de_productos {
+        display: flex;
+        justify-content: center;
+  
+        img {
+          width: 20cm;
+          margin: 20px; // Separación de 20px entre las imágenes
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+          transition: box-shadow 0.3s ease, transform 0.3s ease; // Agregando transición para sombra y transformación
+          height: 250px;
+          border-radius: 20px; // Añadiendo un radio de borde inicial
+  
+          &:hover {
+            box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px); // Movimiento hacia arriba al pasar el cursor
+          }
+        }
+      }
+    }
+  }
+  
+
+  .demostracion{
+    p{
+        text-align: center;
+        text-shadow: 2px 2px 2px $color-activo;
+        color: darkblue;
+        text-decoration: underline;
+    }
+    img {
+        width: 20cm;
+        margin: 20px; // Separación de 20px entre las imágenes
+        box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.4); // Sombras más intensas
+        transition: box-shadow 0.5s ease, transform 0.5s ease; // Animación más lenta
+        height: 250px;
+        border-radius: 20px; // Radio de borde inicial
+
+        &:hover {
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6); // Sombras aún más intensas al pasar el cursor
+          transform: translateY(-15px); // Movimiento hacia arriba más pronunciado
+        }
+      }
+  }
+
+
+    
+
+// Variables
+$color-violeta-oscuro: #a541ec;
+$color-celeste-oscuro: #1e90ff;
+$color-celeste-mas-oscuro: #2727a7;
+$color-sombra: 2px 2px 3px black;
+$espaciado-interior: 20px;
+$espaciado-margin: 10px;
+
+// Estilos del footer
+footer {
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(81, 6, 143, 0.76); // Usando rgba para la opacidad
+
+  .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-violeta-oscuro;
+    padding: $espaciado-interior;
+
+    h3 {
+      margin-bottom: $espaciado-margin;
+      color: lightseagreen;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-celeste-oscuro;
+      transition: color 0.5s ease, text-shadow 0.5s ease;
+      margin-bottom: $espaciado-margin;
+
+      &:hover {
+        color: $color-celeste-mas-oscuro;
+        text-shadow: $color-sombra;
+      }
+    }
+  }
+}
+// Mediaquery para dispositivos móviles
+@media only screen and (max-width: 767px) {
+  // Ajuste de estilos para dispositivos móviles aquí
+  .navbar-collapse {
+    transform: translateY(-100%);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .titulos {
+    text-align: center;
+    padding: 20px;
+  }
+
+  seccion article .sitios_de_productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 80%;
+      margin: 10px 0;
+    }
+  }
+
+  aside .demostracion {
+    text-align: center;
+
+    img {
+      width: 80%;
+      margin: 10px 0;
+    }
+  }
+
+  footer .redes {
+    text-align: center;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    a {
+      margin-bottom: 10px;
+    }
+  }
+}
+

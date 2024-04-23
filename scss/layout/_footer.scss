@@ -1,0 +1,59 @@
+/* Estilos del pie de página*/
+// Variables
+$yellow: yellow;
+$black: black;
+$white: white;
+$blueviolet: blueviolet;
+$transition-duration: 1s;
+$border-radius: 20px;
+
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+@mixin link-styles {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    color: $blueviolet;
+    font-size: 20px;
+
+    &:hover {
+        @include transition(all $transition-duration);
+        animation: alternate $transition-duration infinite;
+        animation-duration: 1ms;
+        color: $white;
+        background-color: $blueviolet;
+        text-decoration: none;
+        border-radius: $border-radius;
+    }
+}
+
+// Extends
+%link-styles {
+    @include link-styles;
+}
+
+// Estilos
+.rrss {
+    color: $yellow;
+    background-color: $black;
+    text-align: center;
+    text-shadow: 1px 2px 1px $white;
+    font-size: 34px;
+
+    p {
+        @include transition(all $transition-duration ease-in);
+        transition-duration: $transition-duration;
+    }
+
+    a {
+        @extend %link-styles;
+    }
+
+    .special-link {
+        @extend %link-styles;
+        font-weight: bold;
+    }
+}

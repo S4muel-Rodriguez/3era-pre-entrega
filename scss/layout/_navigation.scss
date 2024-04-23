@@ -1,0 +1,129 @@
+/*Estilos de la navegación*/ 
+// Variables
+$bg-body-tertiary: #f0f0f0;
+$text-color: #333;
+$transition-duration: 1s;
+$box-shadow-default: 0px 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0px 4px 8px rgba(0, 0, 0, 0.2);
+$color-seagreen: seagreen;
+$color-blueviolet: blueviolet;
+
+// Funciones
+@function darken($color, $amount) {
+  @return mix(black, $color, $amount);
+}
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Extend
+%navbar-link {
+  color: $text-color;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  box-shadow: $box-shadow-default;
+  @include transition(all $transition-duration ease-in-out);
+
+  &:hover {
+    color: darken($text-color, 10%);
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+// Estilos para la barra de navegación
+.navbar {
+  margin-bottom: 20px; // Separación del contenido
+  background-color: transparent;
+  border-bottom: none;
+
+  .navbar-brand {
+    font-weight: bold;
+    color: $text-color;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    box-shadow: $box-shadow-default;
+    @include transition(all $transition-duration ease-in-out);
+    background-color: rgb(144, 49, 233);
+
+    &:hover {
+      color: darken($text-color, 10%);
+      box-shadow: $box-shadow-hover;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      @extend %navbar-link;
+      
+      &.active {
+        font-weight: bold;
+        
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background-color: $color-blueviolet;
+    color: $text-color;
+    box-shadow: $box-shadow-default;
+        
+
+    &:hover {
+      color: darken($text-color, 10%);
+      box-shadow: $box-shadow-hover;
+            
+    }
+  }
+}
+
+// Estilos para el título
+.titulo {
+  text-align: center;
+  margin-top: 20px; // Separación del navbar
+  margin-bottom: 20px; // Espacio entre el título y el contenido
+}
+// Variables
+$amarillo: rgb(171, 173, 7);
+$grey: grey;
+$rgba-black: rgba(0, 0, 0, 0.5);
+$transition-duration: 0.3s;
+$animation-duration: 0.5s;
+
+// Funciones
+@function darken($color, $amount) {
+  @return mix(black, $color, $amount);
+}
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Extend
+%section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: $grey;
+  
+    p {
+      text-shadow: 2px 2px 4px $rgba-black;
+      animation: title-animation $animation-duration infinite alternate;
+    }
+  
+    @keyframes title-animation {
+      from {
+        color: $amarillo;
+      }
+      to {
+        color: $grey;
+      }
+    }
+  }
+
+// Estilos para la sección de belleza
+.seccion_belleza {
+  @extend %section-title;
+}

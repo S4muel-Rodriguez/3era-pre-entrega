@@ -1,0 +1,23 @@
+/* Importar las variables, funciones y mixins primero, porque pueden ser necesitados en otros archivos*/
+
+
+@import "utilities/variables";
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/helpers";
+
+/* Bases generales del sitio*/
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+/*Layouts del sitio*/
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+@import "layout/navigation";
+/* Pages del sitio*/
+@import "page/iniciodesesion";
+@import "pages/contacto";
+@import "pages/nosotros";
+@import "pages/producto";

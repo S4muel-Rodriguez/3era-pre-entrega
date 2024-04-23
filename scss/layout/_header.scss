@@ -1,0 +1,114 @@
+/*Estilos del encabezado*/
+// Variables
+$seagreen: seagreen;
+$blueviolet: blueviolet;
+$rgba-black: black;
+$rgba-black-strong: black;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties...) {
+    transition: $properties;
+}
+
+// Estilos
+body {
+    background-image: linear-gradient(to left, $seagreen, $blueviolet);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.seccion_belleza {
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(235, 232, 74);
+    p {
+        text-shadow: 2px 2px 4 $rgba-black;
+    }
+}
+
+
+.fotos_producto--belleza {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .producto-container {
+        text-align: center;
+        margin: 10px;
+
+        img {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px $rgba-black;
+            @include transition(all $transition-duration ease-in-out);
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 4px 4px 8px $rgba-black-strong;
+            }
+        }
+    }
+
+    input[type="button"] {
+        width: 200px;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        border: 2px solid white;
+        border-radius: 10px;
+        background-image: linear-gradient(to left, $blueviolet, $seagreen);
+        color: black;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 2px 2px 4px $rgba-black;
+        @include transition(all $transition-duration ease-in-out);
+        display: block;
+        margin: 0 auto;
+
+        &:hover {
+            background-image: linear-gradient(to left, $seagreen, $blueviolet);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 8px $rgba-black-strong;
+        }
+    }
+}
+
+
+
+
+// Variables
+$border-radius: 10px;
+$rgba-black: black;
+$rgba-black-strong: black;
+$transition-duration: 1s;
+
+// Mixins
+@mixin transition($properties) {
+    transition: $properties;
+    transition-duration: 1s all ease-in;
+}
+
+// estilos para el carrusel
+#carouselExampleSlidesOnly {
+    margin: 0 auto;
+  width: 80%; // Ajuste  del ancho según sea necesario
+
+    .carousel-inner {
+    .carousel-item img {
+        border-radius: $border-radius;
+        box-shadow: 2px 2px 4px $rgba-black;
+        @include transition(all $transition-duration ease-in-out);
+
+        &:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 8px $rgba-black-strong;
+        transition: $transition-duration ease-in;
+
+        }
+    }
+    }
+}

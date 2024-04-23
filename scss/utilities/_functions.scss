@@ -1,0 +1,8 @@
+/*Funciones*/
+// Funciones
+@function darken($color, $amount) {
+    @return mix(black, $color, $amount);
+  }
+  @function multiply($a, $b) {
+    @return $a * $b;
+  }

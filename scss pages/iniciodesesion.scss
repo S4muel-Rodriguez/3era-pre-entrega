@@ -1,0 +1,426 @@
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    
+    // Variables
+$blueviolet: rgba(200, 245, 38, 0.479);
+$seagreen: rgba(23, 114, 62, 0.911);
+background-image: linear-gradient(to left  , $blueviolet, $seagreen), url("/img/productos\ foto.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+// Variables
+$text-color: rgb(152, 66, 233);
+$transition-duration: 0.3s;
+$box-shadow-default: 2px 2px 3px rgba(148, 15, 15, 0.466);
+$box-shadow-hover: 3px 2px 3px rgba(0, 0, 0, 0.2);
+
+// Mixins
+@mixin transition($properties...) {
+  transition: $properties;
+}
+
+// Estilos para el navbar
+.navbar {
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-bottom: none;
+
+  .navbar-brand,
+  .nav-link {
+    color: $text-color;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    box-shadow: $box-shadow-default;
+    background-color: black;
+    @include transition(all $transition-duration ease-in-out);
+
+    &:hover {
+      color: darken($text-color, 10%);
+      box-shadow: $box-shadow-hover;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    background-color: $text-color;
+    color: $text-color;
+    box-shadow: $box-shadow-default;
+
+    &:hover {
+      color: darken($text-color, 10%);
+      box-shadow: $box-shadow-hover;
+    }
+  }
+}
+
+
+// Variables
+$blueviolet: blueviolet;
+$seagreen: seagreen;
+$black: black;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+}
+
+// Extend
+%input-styles {
+  border: 2px solid $blueviolet; // Borde del input
+  border-radius: 12px; // Borde redondeado
+  padding: 12px; // Espaciado interno
+  font-size: 18px; // Tamaño de fuente
+  color: $blueviolet; // Color del texto
+  background-color: transparent; // Fondo transparente
+  box-shadow: 0 0 10px $seagreen; // Sombra alrededor del input
+  @include transition(all $transition-duration ease-in-out); // Transición suave al pasar el ratón
+
+  &:focus {
+    outline: none; // Eliminar el contorno al estar enfocado
+    box-shadow: 0 0 15px $seagreen; // Sombra más pronunciada al estar enfocado
+  }
+}
+
+// Variables
+$blueviolet: blueviolet;
+$seagreen: seagreen;
+$black: black;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+}
+
+// Extend
+%input-styles {
+  border: 2px solid $blueviolet; // Borde del input
+  border-radius: 12px; // Borde redondeado
+  padding: 12px; // Espaciado interno
+  font-size: 18px; // Tamaño de fuente
+  color: $blueviolet; // Color del texto
+  background-color: transparent; // Fondo transparente
+  box-shadow: 0 0 10px $seagreen; // Sombra alrededor del input
+  @include transition(all $transition-duration ease-in-out); // Transición suave al pasar el ratón
+
+  &:focus {
+    outline: none; // Eliminar el contorno al estar enfocado
+    box-shadow: 0 0 15px $seagreen; // Sombra más pronunciada al estar enfocado
+  }
+}
+
+// Variables
+$blueviolet: blueviolet;
+$seagreen: seagreen;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+}
+
+// Estilos para el formulario de registro
+.registro {
+  text-align: center; // Alinear texto al centro
+  margin: 20px auto; // Margen vertical y centrado horizontalmente
+  padding: 20px; // Relleno interno
+  border-radius: 20px; // Borde redondeado
+  background-image: linear-gradient(to left, $blueviolet, $seagreen); // Fondo con degradado de colores
+  box-shadow: 0 0 20px $blueviolet; // Sombra alrededor del formulario
+  @include transition(all $transition-duration ease-in-out); // Transición suave al cambiar el formulario
+
+  @media (max-width: 50px) {
+    padding: 10px; // Reducir relleno en dispositivos de tamaño medio
+  }
+
+  ul {
+    list-style: none; // Eliminar viñetas de la lista
+    padding: 0; // Eliminar relleno interno
+
+    li {
+      margin-bottom: 20px; // Espacio inferior entre elementos
+
+    }
+}
+}
+
+
+.boton-registro--enviar {
+    cursor: pointer; // Cambiar cursor al pasar el ratón
+    background-color: blueviolet; // Color de fondo del botón
+    color: white; // Color del texto del botón
+    font-weight: bold; // Negrita en el texto del botón
+    border: none; // Eliminar borde del botón
+    border-radius: 5px; // Borde redondeado
+    padding: 10px 20px; // Relleno interno
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); // Sombra
+    transition: 1s all ease-in; // Transición suave al cambiar propiedades
+    
+    &:hover {
+      background-color: seagreen; // Cambiar color de fondo al pasar el ratón sobre el botón
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); // Sombra más pronunciada al pasar el ratón sobre el botón
+      border: 2px solid seagreen; // Añadir borde sólido al pasar el ratón sobre el botón
+      border-radius: 10px; // Aumentar el border-radius al pasar el ratón sobre el botón
+    }
+    }
+    
+
+
+
+
+// Variables
+$blueviolet: blueviolet;
+$seagreen: seagreen;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+}
+
+// Estilos para .nav-link.active
+.nav-link.active {
+  color: $blueviolet; // Color del texto
+  text-shadow: 2px 2px 2px $blueviolet; // Sombra del texto
+  transition: all $transition-duration ease-in-out; // Transición suave
+  transform-origin: center; // Origen de la transformación
+
+  &:hover {
+    transform: scale(1.05); // Escalar ligeramente al pasar el ratón
+    box-shadow: 2px 2px 10px $seagreen; // Sombra alrededor del enlace al pasar el ratón
+  }
+}
+
+
+
+
+// Variables
+$blueviolet: blueviolet;
+$seagreen: seagreen;
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+}
+
+// Estilos para el título de registro
+.titulosregistro {
+  text-align: center; // Alinear texto al centro
+  margin-bottom: 20px; // Espacio inferior
+
+  h1 {
+    color: $blueviolet; // Color del título
+    text-shadow: 2px 2px 4px $seagreen; // Sombra del texto
+    @include transition(all $transition-duration ease-in-out); // Transición suave al pasar el ratón
+
+    &:hover {
+      transform: scale(1.05); // Escalar ligeramente al pasar el ratón
+    }
+  }
+
+  h2 {
+    color: $blueviolet; // Color del subtítulo
+    text-shadow: 2px 2px 4px $seagreen; // Sombra del texto
+    @include transition(all $transition-duration ease-in-out); // Transición suave al pasar el ratón
+
+    &:hover {
+      transform: scale(1.05); // Escalar ligeramente al pasar el ratón
+    }
+  }
+}
+// Variables
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-size: 5px;
+$animation-duration: 0.5s;
+
+// Funciones
+@function multiply($a, $b) {
+  @return $a * $b;
+}
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+  transition-duration: $animation-duration;
+}
+
+// Variables
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-size: 5px;
+$animation-duration: 0.5s;
+
+// Funciones
+@function multiply($a, $b) {
+  @return $a * $b;
+}
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+  transition-duration: $animation-duration;
+}
+// Variables
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-size: 5px;
+$animation-duration: 0.5s;
+
+// Funciones
+@function multiply($a, $b) {
+  @return $a * $b;
+}
+
+// Mixins
+@mixin transition($properties) {
+  transition: $properties;
+  transition-duration: $animation-duration;
+}
+
+// Variables
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-size: 5px;
+$animation-duration: 0.5s;
+
+// Funciones
+@function multiply($a, $b) {
+  @return $a * $b;
+}
+
+// Mixins
+@mixin transition($properties) {
+    transition: $properties;
+    transition-duration: $animation-duration;
+}
+
+
+
+
+
+
+// Variables
+$shadow-color: rgba(0, 0, 0, 0.3);
+$shadow-size: 5px;
+$animation-duration: 0.5s;
+
+// Funciones
+@function multiply($a, $b) {
+  @return $a * $b;
+}
+
+// Mixins
+@mixin transition($properties) {
+    transition: $properties;
+    transition-duration: $animation-duration;
+}
+
+// Estilos para el footer
+footer {
+  background-color: black; // Fondo negro
+  color: blueviolet; // Color inicial de los textos
+    padding: 20px;
+    text-align: center;
+  position: fixed; // Fijar al fondo
+  bottom: 0; // Pegado abajo
+    left: 0;
+    width: 100%;
+    box-shadow: 0 $shadow-size multiply(2, $shadow-size) $shadow-color;
+    
+
+    .contactos {
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      color: inherit; // Heredar el color del footer
+        @include transition(color);
+    }
+
+    a {
+      color: inherit; // Heredar el color del footer
+        text-decoration: none;
+        margin: 0 10px;
+        @include transition(color);
+
+        &:hover {
+        color: seagreen; // Color al pasar el ratón
+        }
+    }
+
+    i {
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    }
+}
+
+// Cambiar el color de los textos a verde oscuro
+footer:hover {
+    color: seagreen;
+}
+
+textarea {
+    width: 18%; // Ancho completo
+    height: 45px; // Altura del textarea
+    border-radius: 5px; // Borde redondeado
+    border: 2px solid blueviolet; // Borde sólido
+    background-color: rgb(241, 241, 226); // Color de fondo
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); // Sombra
+    transition: box-shadow $animation-duration; // Transición de la sombra
+    margin-bottom: 20px; // Espacio inferior
+  }
+  
+  button {
+    cursor: pointer; // Cambiar cursor al pasar el ratón
+    background-color: blueviolet; // Color de fondo del botón
+    color: white; // Color del texto del botón
+    font-weight: bold; // Negrita en el texto del botón
+    border: none; // Eliminar borde del botón
+    border-radius: 5px; // Borde redondeado
+    padding: 10px; // Relleno interno
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); // Sombra
+    transition: background-color $animation-duration; // Transición suave al cambiar el color de fondo del botón
+  
+    &:hover {
+      background-color: seagreen; // Cambiar color de fondo al pasar el ratón sobre el botón
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); // Sombra más pronunciada al pasar el ratón sobre el botón
+    }
+  }
+// Media query para dispositivos móviles
+@media (max-width: 767px) {
+    .navbar {
+      display: flex;
+      justify-content: space-between; // Espacio entre elementos
+      align-items: center; // Alinear verticalmente al centro
+  
+      .navbar-toggler {
+        order: 1; // Cambiar el orden del botón de la hamburguesa
+      }
+    }
+  
+    .navbar-brand {
+      margin-right: auto; // Mover la marca al extremo izquierdo
+    }
+  
+    .registro {
+      padding: 10px; // Reducir relleno en dispositivos móviles
+    }
+  
+    textarea,
+    button {
+      width: 100%; // Ancho completo en dispositivos móviles
+    }
+  }
+  
+    
+    
+  // Media queries para tabletas
+  @media (min-width: 768px) and (max-width: 991px) {
+    body {
+      background-size: cover; // Restaurar tamaño del background en tabletas
+    }
+  
+    .registro {
+      padding: 15px; // Ajustar relleno en tabletas
+    }
+  }
