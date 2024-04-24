@@ -1,3 +1,226 @@
+@charset "UTF-8";
+body {
+  background-image: linear-gradient(to right, rgba(3, 61, 68, 0.945), rgba(158, 6, 64, 0.644));
+}
 
+nav {
+  text-align: center;
+}
+nav .barranav {
+  background-color: seagreen;
+  padding: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+nav .barranav ul {
+  list-style: none;
+  padding: 0;
+}
+nav .barranav ul li {
+  display: inline;
+}
+nav .barranav ul li a {
+  text-decoration: none;
+  color: #8002f7;
+  padding: 8px 16px;
+  transition: color 1s, text-shadow 1s;
+  text-shadow: 1px 1px black;
+}
+nav .barranav ul li a:hover {
+  color: violet;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 20px;
+}
+
+.titulo {
+  text-align: center;
+  background-color: rgba(87, 8, 177, 0.363);
+  border-radius: 10px;
+  width: 100vw;
+  text-decoration: underline;
+}
+.titulo h1 {
+  color: rgba(131, 7, 202, 0.993);
+  transition: color 0.5s, text-shadow 0.5s;
+}
+.titulo h1:hover {
+  color: violet;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section article {
+  margin-bottom: 20px;
+}
+section article div {
+  text-align: center;
+}
+section article div h2 {
+  color: seagreen;
+  transition: color 0.5s, text-shadow 0.5s;
+  margin-bottom: 10px;
+}
+section article div h2:hover {
+  color: violet;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+section article div p {
+  color: seagreen;
+  transition: color 0.5s;
+  margin-bottom: 10px;
+}
+section article div p:hover {
+  color: violet;
+}
+section article div img {
+  max-width: 60%;
+  height: auto;
+  transition: transform 0.5s, box-shadow 0.5s;
+  border-radius: 20px;
+}
+section article div img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #carouselExampleSlidesOnly {
+  width: 80%;
+  max-width: 8000px;
+}
+main #carouselExampleSlidesOnly .carousel-inner .carousel-item img {
+  max-width: 100%;
+  height: 756px;
+  transition: transform 1s, box-shadow 1s;
+  background-color: black;
+  border-radius: 20px;
+}
+main #carouselExampleSlidesOnly .carousel-inner .carousel-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+}
+footer .redes__sociales--contactanos h3 {
+  color: seagreen;
+  margin-bottom: 20px;
+  transition: color 0.5s, text-shadow 0.5s;
+}
+footer .redes__sociales--contactanos h3:hover {
+  color: violet;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+footer .redes__sociales--contactanos a {
+  color: blueviolet;
+  text-decoration: none;
+  transition: color 0.5s;
+  margin-bottom: 20cm;
+}
+footer .redes__sociales--contactanos a:hover {
+  color: violet;
+}
+footer .redes__sociales--contactanos p {
+  margin: 20px 0;
+}
+
+/* Media queries para tamaños de pantalla de 320px a 576px */
+@media screen and (max-width: 576px) {
+  .champu-revitalizante,
+  .mascarilla_reparadora,
+  .spray_protector {
+    padding: 15px; /* Ajuste de padding */
+  }
+  .champu-revitalizante h2,
+  .mascarilla_reparadora h2,
+  .spray_protector h2,
+  .champu-revitalizante p,
+  .mascarilla_reparadora p,
+  .spray_protector p {
+    font-size: 1rem; /* Tamaño de fuente ajustado */
+  }
+  .carousel-item img {
+    border-radius: 8px; /* Redondeo de borde ajustado */
+  }
+}
+/* Estilos base */
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 576px) {
+  header {
+    padding: 10px;
+  }
+  .barranav {
+    padding: 5px;
+  }
+  .barranav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .barranav ul li {
+    margin-bottom: 10px;
+  }
+  .titulo h1 {
+    font-size: 1.2rem;
+  }
+  .champu-revitalizante,
+  .mascarilla_reparadora,
+  .spray_protector {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Nuevas medidas */
+  }
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px;
+  }
+  footer {
+    padding: 10px;
+  }
+  .redes__sociales--contactanos {
+    text-align: center;
+  }
+}
+/* Estilos adicionales para dispositivos móviles con pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+  header {
+    padding: 5px;
+  }
+  .titulo h1 {
+    font-size: 1rem;
+  }
+  .champu-revitalizante,
+  .mascarilla_reparadora,
+  .spray_protector {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px; /* Mismas medidas que en dispositivos más grandes */
+  }
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  footer {
+    padding: 5px;
+  }
+}
 
 /*# sourceMappingURL=producto.css.map */

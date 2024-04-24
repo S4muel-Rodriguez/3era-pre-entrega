@@ -1,0 +1,362 @@
+body{
+    background-image: linear-gradient(to right, rgba(3, 61, 68, 0.945), rgba(158, 6, 64, 0.644));
+}
+/// poniendo variables
+$color-fondo: seagreen;
+$color-texto: #8002f7;
+$color-hover: violet;
+$transicion: 1s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Estilo para la barra de navegación
+nav {
+    text-align: center;
+
+    .barranav {
+        background-color: $color-fondo;
+        padding: 10px;
+        @include sombra;
+        
+
+        ul {
+            list-style: none;
+            padding: 0;
+            
+
+            li {
+                display: inline;
+            
+
+                a {
+                    text-decoration: none;
+                    color: $color-texto;
+                    padding: 8px 16px;
+                    transition: color $transicion, text-shadow $transicion;
+                    text-shadow:  1px 1px black;
+
+                    &:hover {
+                        color: $color-hover;
+                        text-shadow: 2px 2px 2px black;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Definición de variables
+$color-texto: rgba(131, 7, 202, 0.993);
+$color-hover: violet;
+$transicion: 0.5s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Estilo para el título
+.titulo {
+    text-align: center;
+    background-color: rgba(87, 8, 177, 0.363);
+    border-radius: 10px;
+    width: 100vw;
+    text-decoration: underline;
+    
+
+    h1 {
+        color: $color-texto;
+        transition: color $transicion, text-shadow $transicion;
+
+        &:hover {
+            color: $color-hover;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+// Definición de variables
+$color-texto: seagreen;
+$color-hover: violet;
+$transicion: 0.5s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Estilo para los artículos
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    article {
+        margin-bottom: 20px;
+
+        div {
+            text-align: center;
+                
+
+            h2 {
+                color: $color-texto;
+                transition: color $transicion, text-shadow $transicion;
+                margin-bottom: 10px;
+                    
+
+                &:hover {
+                    color: $color-hover;
+                    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            p {
+                color: $color-texto;
+                transition: color $transicion;
+                margin-bottom: 10px;
+
+                &:hover {
+                    color: $color-hover;
+                    
+                }
+            }
+
+            img {
+                max-width: calc(100% - 40%);
+                height: auto;
+                transition: transform $transicion, box-shadow $transicion;
+                border-radius: 20px;
+                
+                
+
+                &:hover {
+                    transform: scale(1.1);
+                    @include sombra;
+                }
+            }
+        }
+    }
+}
+
+// Definición de variables
+$color-texto: rgba(8, 99, 47, 0.61);
+$color-hover: rgb(148, 36, 148);
+$transicion: 1s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Estilo para el carrusel
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    #carouselExampleSlidesOnly {
+        width: 80%;
+        max-width: 8000px;
+        
+
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    max-width: 100%;
+                    height: 756px;
+                    transition: transform $transicion, box-shadow $transicion;
+                    background-color: black;
+                    border-radius: 20px;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        @include sombra;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Definición de variables
+$color-texto: seagreen;
+$color-hover: violet;
+$transicion: 0.5s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Definición de variables
+$color-texto: seagreen;
+$color-hover: violet;
+$transicion: 0.5s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/// Definición de variables
+$color-texto: seagreen;
+$color-hover: violet;
+$transicion: 0.5s;
+
+// Mixin para sombra
+@mixin sombra {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+// Estilos para el footer
+footer {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+
+    .redes__sociales--contactanos {
+        h3 {
+            color: $color-texto;
+            margin-bottom: 20px; // Separación de 20px entre el título y los enlaces
+            transition: color $transicion, text-shadow $transicion;
+
+            &:hover {
+                color: $color-hover;
+                text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        a {
+            color: blueviolet; // Cambio de color a blueviolet
+            text-decoration: none;
+            transition: color $transicion;
+            margin-bottom: 20cm; // Separación de 20cm entre los enlaces
+
+            &:hover {
+                color: $color-hover;
+            }
+        }
+
+        p {
+            margin: 20px 0; // Separación de 20px entre párrafos
+        }
+    }
+}
+
+
+
+/* Media queries para tamaños de pantalla de 320px a 576px */
+
+@media screen and (max-width: 576px) {
+    .champu-revitalizante,
+    .mascarilla_reparadora,
+    .spray_protector {
+        padding: 15px; /* Ajuste de padding */
+    }
+
+    .champu-revitalizante h2,
+    .mascarilla_reparadora h2,
+    .spray_protector h2,
+    .champu-revitalizante p,
+    .mascarilla_reparadora p,
+    .spray_protector p {
+        font-size: 1rem; /* Tamaño de fuente ajustado */
+    }
+
+    .carousel-item img {
+        border-radius: 8px; /* Redondeo de borde ajustado */
+    }
+}
+
+
+/* Estilos base */
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 10px;
+    }
+
+    .barranav {
+        padding: 5px;
+    }
+
+    .barranav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barranav ul li {
+        margin-bottom: 10px;
+    }
+
+    .titulo h1 {
+        font-size: 1.2rem;
+    }
+
+    .champu-revitalizante,
+    .mascarilla_reparadora,
+    .spray_protector {
+        width: 90%;
+        margin: 0 auto 20px auto;
+        transition: all 0.5s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px; /* Nuevas medidas */
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        border-radius: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .redes__sociales--contactanos {
+        text-align: center;
+    }
+}
+
+/* Estilos adicionales para dispositivos móviles con pantallas muy pequeñas */
+@media screen and (max-width: 320px) {
+    header {
+        padding: 5px;
+    }
+
+    .titulo h1 {
+        font-size: 1rem;
+    }
+
+    .champu-revitalizante,
+    .mascarilla_reparadora,
+    .spray_protector {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px; /* Mismas medidas que en dispositivos más grandes */
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
