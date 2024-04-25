@@ -82,11 +82,11 @@ section article .equipos-sectores ul {
 }
 
 footer {
-  padding: 20px;
   position: fixed;
-  left: 0;
-  bottom: 0;
+  left: 0px;
+  bottom: 0px;
   width: 100%;
+  background-color: #212529; /* Aplicando el color de fondo al footer */
 }
 footer .redes_sociales {
   text-align: center;
@@ -94,8 +94,8 @@ footer .redes_sociales {
   font-family: Arial, sans-serif;
 }
 footer .redes_sociales h3, footer .redes_sociales a {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   transition: all 1s ease;
   box-shadow: 2px 2px 2px black;
   text-decoration: none;
@@ -138,6 +138,59 @@ footer .redes_sociales h3:hover, footer .redes_sociales a:hover {
   footer {
     padding: 30px;
   }
+}
+aside {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+aside .aplicar_marketing-digital,
+aside .aplicar-ciberseguridad,
+aside .aplicar_desarrollo--mantenimiento,
+aside .aplicar-servicio_cloud {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  animation: aparecer 0.5s ease forwards;
+}
+aside .aplicar_marketing-digital h1, aside .aplicar_marketing-digital h2, aside .aplicar_marketing-digital h3, aside .aplicar_marketing-digital h4,
+aside .aplicar-ciberseguridad h1,
+aside .aplicar-ciberseguridad h2,
+aside .aplicar-ciberseguridad h3,
+aside .aplicar-ciberseguridad h4,
+aside .aplicar_desarrollo--mantenimiento h1,
+aside .aplicar_desarrollo--mantenimiento h2,
+aside .aplicar_desarrollo--mantenimiento h3,
+aside .aplicar_desarrollo--mantenimiento h4,
+aside .aplicar-servicio_cloud h1,
+aside .aplicar-servicio_cloud h2,
+aside .aplicar-servicio_cloud h3,
+aside .aplicar-servicio_cloud h4 {
+  color: #5e08a5;
+}
+aside .aplicar_marketing-digital p,
+aside .aplicar-ciberseguridad p,
+aside .aplicar_desarrollo--mantenimiento p,
+aside .aplicar-servicio_cloud p {
+  color: #5c035c;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+aside .aplicar_marketing-digital h1,
+aside .aplicar-ciberseguridad h2,
+aside .aplicar_desarrollo--mantenimiento h3,
+aside .aplicar-servicio_cloud h4 {
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=contacto.css.map */

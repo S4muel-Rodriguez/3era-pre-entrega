@@ -166,37 +166,37 @@ $espaciado-interior: 20px; // Espaciado interior
   box-shadow: $x $y $blur $color;
 }
 
-// Estilos del footer
 footer {
-    padding: 20px; // Espaciado interno del footer
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+  position:fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  background-color: #212529; /* Aplicando el color de fondo al footer */
 
   .redes_sociales {
-    text-align: center; // Centra los elementos
-    font-size: 16px; // Tamaño de fuente
-    font-family: Arial, sans-serif; // Fuente
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 
     h3, a {
-      margin: 0px; // Elimina el margen
-      padding: 0px; // Añade espacio interno
-      transition: all 1s ease; // Transición suave
-      @include sombra(2px, 2px, 2px, black); // Agrega sombra
+      margin: 0;
+      padding: 0;
+      transition: all 1s ease;
+      box-shadow: 2px 2px 2px black;
       text-decoration: none;
       text-shadow: black;
       color: rgba(207, 207, 4, 0.685);
       background-color: #212529;
 
-
       &:hover {
-        color: darken($color-texto, 10%); // Cambia el color al pasar el cursor
-        transform: translateY(-5px); // Levanta ligeramente al pasar el cursor
+        color: darken($color-texto, 10%);
+        transform: translateY(-5px);
       }
     }
   }
 }
+
+
 
 /* Media queries para dispositivos móviles */
 @media screen and (max-width: 767px) {
@@ -232,6 +232,59 @@ footer {
     /* Estilos del footer */
     footer {
       padding: 30px;
+    }
+  }
+
+  
+
+
+  $color-texto: #5c035c;
+  $color-titulo: #5e08a5;
+  $border-radius: 10px;
+  $shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  
+  aside {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  
+    .aplicar_marketing-digital,
+    .aplicar-ciberseguridad,
+    .aplicar_desarrollo--mantenimiento,
+    .aplicar-servicio_cloud {
+      padding: 20px;
+      text-align: center;
+      border-radius: $border-radius;
+      box-shadow: $shadow;
+  
+      h1, h2, h3, h4 {
+        color: $color-titulo;
+      }
+      
+      p {
+        color: $color-texto;
+      }
+  
+      @keyframes aparecer {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+  
+      animation: aparecer 0.5s ease forwards;
+    }
+  
+    .aplicar_marketing-digital h1,
+    .aplicar-ciberseguridad h2,
+    .aplicar_desarrollo--mantenimiento h3,
+    .aplicar-servicio_cloud h4 {
+      margin-bottom: 10px;
     }
   }
   
